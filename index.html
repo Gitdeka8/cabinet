@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clinique Privée Bobo-Dioulasso - Design Séduisant</title>
+
+  <!-- Google Fonts : Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #FAFAFA;
+      color: #212121;
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 250, 250, 0.97);
+      box-shadow: 0 2px 6px rgba(46, 125, 50, 0.15);
+      z-index: 1000;
+    }
+    .menu {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      justify-content: space-between;
+    }
+    .menu ul {
+      display: flex;
+      gap: 30px;
+    }
+    .menu ul li a {
+      font-weight: 600;
+      font-size: 16px;
+      padding-bottom: 4px;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      border-bottom: 2px solid transparent;
+      color: #2E7D32;
+    }
+    .menu ul li a:hover {
+      color: #F9A825;
+      border-bottom: 2px solid #F9A825;
+    }
+    .menu ul li a.active {
+      color: #2E7D32;
+      border-bottom: 2px solid #2E7D32;
+      font-weight: 700;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 320px;
+    }
+    .hero-text h1 {
+      font-size: 36px;
+      color: #2E7D32;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    .btn-reserve {
+      background: linear-gradient(45deg, #2E7D32, #F9A825);
+      color: white;
+      padding: 14px 28px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(249, 168, 37, 0.5);
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    .btn-reserve:hover {
+      background: linear-gradient(45deg, #1b4b19, #c7a41e);
+    }
+    .hero-image {
+      flex: 1;
+      min-width: 320px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(46, 125, 50, 0.15);
+      overflow: hidden;
+    }
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .services h2 {
+      font-size: 32px;
+      color: #2E7D32;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+    .service-cards {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+      padding: 30px 20px;
+      flex: 1 1 250px;
+      max-width: 280px;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(46, 125, 50, 0.2);
+    }
+    .card-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #2E7D32;
+    }
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #212121;
+      font-weight: 600;
+    }
+    .card p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #2E7D32;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 60px;
+    }
+
+    /* ===== BOUTON WHATSAPP FLOTTANT ===== */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #F9A825;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(249, 168, 37, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .whatsapp-btn:hover {
+      background: #c7a41e;
+    }
+    .whatsapp-btn img {
+      width: 35px;
+      height: 35px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .service-cards {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+
+<head>
+  ...
+  <style>
+    header {
+      background: linear-gradient(90deg, #2E7D32, #81C784);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 20px 0;
+    }
+    /* Ajoute ici tout le CSS voulu */
+  </style>
+</head>
+
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="equipe.html">Équipe</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bienvenue à la Clinique Privée de Bobo-Dioulasso</h1>
+      <p>Des soins de qualité, une équipe dévouée et une prise en charge personnalisée, près de chez vous.</p>
+      <a href="https://wa.me/22656252693" target="_blank" rel="noopener" class="btn-reserve">Réservez via WhatsApp</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Médecins africains souriants" />
+    </div>
+  </section>
+
+  <section class="services">
+    <h2>Nos Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <div class="card-icon">🩺</div>
+        <h3>Consultations générales</h3>
+        <p>Des consultations avec des médecins expérimentés pour toute la famille.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔬</div>
+        <h3>Analyses médicales</h3>
+        <p>Laboratoire équipé pour vos analyses rapides et fiables.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚑</div>
+        <h3>Urgences 24h/24</h3>
+        <p>Une prise en charge immédiate pour les cas d’urgence médicale.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💊</div>
+        <h3>Pharmacie interne</h3>
+        <p>Une pharmacie accessible pour vos médicaments prescrits.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Clinique Privée Bobo-Dioulasso — Adresse : 5PRF+WM9, Dogona, Bobo-Dioulasso — Ouvert 6h à 22h
+</footer>
+
+<!-- Bouton WhatsApp flottant -->
+<a href="https://wa.me/22656252693" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Réserver via WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
+</body>
+</html>
+<head>
+  <link rel="stylesheet" href="css/style.css" />
+</head>

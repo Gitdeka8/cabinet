@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Cabinet de Soins Privé</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #FAFAFA;
+      color: #212121;
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 250, 250, 0.97);
+      box-shadow: 0 2px 6px rgba(46, 125, 50, 0.15);
+      z-index: 1000;
+    }
+    .menu {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      justify-content: space-between;
+    }
+    .menu ul {
+      display: flex;
+      gap: 30px;
+    }
+    .menu ul li a {
+      font-weight: 600;
+      font-size: 16px;
+      padding-bottom: 4px;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      border-bottom: 2px solid transparent;
+      color: #2E7D32;
+    }
+    .menu ul li a:hover {
+      color: #F9A825;
+      border-bottom: 2px solid #F9A825;
+    }
+    .menu ul li a.active {
+      color: #2E7D32;
+      border-bottom: 2px solid #2E7D32;
+      font-weight: 700;
+    }
+
+    /* ===== SECTION CONTACT ===== */
+    .contact {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .contact h1 {
+      font-size: 36px;
+      color: #2E7D32;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    .contact p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+    .contact-info {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .contact-item {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+      padding: 20px;
+      flex: 1 1 280px;
+      max-width: 320px;
+      text-align: left;
+    }
+    .contact-item h2 {
+      color: #2E7D32;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .contact-item p, .contact-item a {
+      color: #555;
+      font-size: 16px;
+    }
+    .contact-item a.btn-whatsapp {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    .contact-item a.btn-whatsapp:hover {
+      background-color: #1ebe57;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+    }
+
+    /* FORMULAIRE */
+    .contact-form {
+      background: white;
+      max-width: 600px;
+      margin: auto;
+      padding: 30px 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+      text-align: left;
+    }
+    .contact-form label {
+      display: block;
+      font-weight: 600;
+      color: #2E7D32;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: vertical;
+    }
+    .contact-form button {
+      background-color: #2E7D32;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .contact-form button:hover {
+      background-color: #1b4d20;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #2E7D32;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 60px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .contact-info {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+
+
+
+header {
+  background: linear-gradient(90deg, #2E7D32, #81C784); /* Vert profond vers vert clair */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 0;
+}
+.contact-section {
+  background-color: #e8f5e9; /* Vert très clair */
+  padding: 40px 20px;
+  margin: 30px auto;
+  border-radius: 15px;
+  max-width: 900px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.menu ul li a {
+  color: #d0f0c0;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-bottom: 3px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  text-decoration: none;
+}
+
+.menu ul li a.active {
+  color: #ffffff;
+  border-bottom: 4px solid #a5d6a7;
+  font-weight: 700;
+}
+
+.menu ul li a:hover {
+  color: #a5d6a7;
+  border-bottom: 4px solid #ffffff;
+  cursor: pointer;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="equipe.html">Équipe</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="contact">
+  <h1>Contactez-nous</h1>
+  <p>Nous sommes là pour répondre à vos questions et prendre vos rendez-vous.</p>
+
+  <div class="contact-info">
+    <div class="contact-item">
+      <h2>Adresse</h2>
+      <p>5PRF+WM9, Dogona, Bobo-Dioulasso</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.8861032579647!2d-4.522813185658959!3d11.175709491952187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfd1ab10183dd6f29%3A0x58eeb8632d9dbd6a!2s5PRF%2BWM9%20Dogona%2C%20Bobo-Dioulasso!5e0!3m2!1sfr!2sbf!4v1691559423821!5m2!1sfr!2sbf"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <h2>Horaires d'ouverture</h2>
+      <p>06h à 22h, tous les jours</p>
+    </div>
+
+    <div class="contact-item">
+      <h2>Réservation WhatsApp</h2>
+      <a class="btn-whatsapp" href="https://wa.me/22656252693" target="_blank" rel="noopener">
+        📱 Cliquez ici pour réserver
+      </a>
+    </div>
+  </div>
+
+  <form class="contact-form" action="#" method="post" onsubmit="alert('Merci pour votre message ! Nous vous répondrons bientôt.'); return false;">
+    <label for="name">Nom complet :</label>
+    <input type="text" id="name" name="name" required placeholder="Votre nom" />
+
+    <label for="phone">Téléphone :</label>
+    <input type="tel" id="phone" name="phone" required placeholder="Votre numéro de téléphone" />
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" required placeholder="Votre message ici" rows="4"></textarea>
+
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 Cabinet de Soins Privé, Bobo-Dioulasso — Tous droits réservés
+</footer>
+
+</body>
+</html>
+<head>
+  <link rel="stylesheet" href="css/style.css" />
+</head>

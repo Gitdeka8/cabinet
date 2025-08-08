@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Équipe - Clinique Privée Bobo-Dioulasso</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #FAFAFA;
+      color: #212121;
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 250, 250, 0.97);
+      box-shadow: 0 2px 6px rgba(46, 125, 50, 0.15);
+      z-index: 1000;
+    }
+    .menu {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      justify-content: space-between;
+    }
+    .menu ul {
+      display: flex;
+      gap: 30px;
+    }
+    .menu ul li a {
+      font-weight: 600;
+      font-size: 16px;
+      padding-bottom: 4px;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      border-bottom: 2px solid transparent;
+      color: #2E7D32;
+    }
+    .menu ul li a:hover {
+      color: #F9A825;
+      border-bottom: 2px solid #F9A825;
+    }
+    .menu ul li a.active {
+      color: #2E7D32;
+      border-bottom: 2px solid #2E7D32;
+      font-weight: 700;
+    }
+
+    /* ===== SECTION EQUIPE ===== */
+    .team {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .team h1 {
+      font-size: 36px;
+      color: #2E7D32;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    .team p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+    .team-cards {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .member {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+      padding: 20px;
+      flex: 1 1 250px;
+      max-width: 280px;
+      transition: transform 0.3s ease;
+    }
+    .member:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(46, 125, 50, 0.2);
+    }
+    .member img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    .member h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #212121;
+      font-weight: 600;
+    }
+    .member p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #2E7D32;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 60px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .team-cards {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="equipe.html" class="active">Équipe</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="team">
+  <h1>Notre Équipe</h1>
+  <p>Des professionnels qualifiés et à votre écoute.</p>
+
+  <div class="team-cards">
+    <div class="member">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80" alt="Médecin 1" />
+      <h3>Dr. Aminata Traoré</h3>
+      <p>Médecin généraliste</p>
+    </div>
+    <div class="member">
+      <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80" alt="Infirmière 1" />
+      <h3>Infirmière Fatoumata Diallo</h3>
+      <p>Soins infirmiers</p>
+    </div>
+    <div class="member">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80" alt="Technicienne" />
+      <h3>Technicienne de laboratoire</h3>
+      <p>Analyses médicales</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Clinique Privée Bobo-Dioulasso — Tous droits réservés
+</footer>
+
+</body>
+</html>
+<head>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
